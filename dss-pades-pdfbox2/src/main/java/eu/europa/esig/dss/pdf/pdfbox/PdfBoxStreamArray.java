@@ -37,6 +37,6 @@ class PdfBoxStreamArray implements PdfStreamArray {
     public PdfBoxStreamArray(PdfArray array) {
         
         //TODO fix
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException("PdfBoxStreamArray");
     }
 }

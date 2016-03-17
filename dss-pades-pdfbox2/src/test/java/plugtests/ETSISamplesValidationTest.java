@@ -49,6 +49,7 @@ public class ETSISamplesValidationTest {
 		validator.setCertificateVerifier(new CommonCertificateVerifier());
 
 		Reports validateDocument = validator.validateDocument();
+                validateDocument.print();
 		assertNotNull(validateDocument);
 
 		DiagnosticData diagnosticData = validateDocument.getDiagnosticData();

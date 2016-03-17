@@ -159,7 +159,7 @@ class PdfBoxDict implements PdfDict {
 		wrapped.setItem(key, a.wrapped);
 		wrapped.setNeedToBeUpdated(true);
 */
-                throw new UnsupportedOperationException();
+                throw new UnsupportedOperationException("PdfBoxDict.add(String key, PdfStreamArray streamArray)");
 	}
 
 	@Override
