@@ -98,7 +98,7 @@ public class PAdESDoubleSignatureTest {
 		dataToSign = service.getDataToSign(signedDocument, params);
 		signatureValue = TestUtils.sign(signatureAlgorithm, privateKeyEntry, dataToSign);
 		DSSDocument doubleSignedDocument = service.signDocument(signedDocument, params, signatureValue);
-
+doubleSignedDocument.save("doubleSignedDocument.pdf");
 		SignedDocumentValidator validator = SignedDocumentValidator.fromDocument(doubleSignedDocument);
 		validator.setCertificateVerifier(new CommonCertificateVerifier());
 

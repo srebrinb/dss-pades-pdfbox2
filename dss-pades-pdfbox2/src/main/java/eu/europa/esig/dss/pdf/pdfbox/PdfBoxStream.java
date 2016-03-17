@@ -40,6 +40,7 @@ class PdfBoxStream implements PdfStream {
 			final OutputStream unfilteredStream = this.wrapped.createOutputStream();
 			unfilteredStream.write(bytes);
 			unfilteredStream.flush();
+                        unfilteredStream.close();
 		} catch (Exception e) {
 			throw new DSSException(e);
 		}

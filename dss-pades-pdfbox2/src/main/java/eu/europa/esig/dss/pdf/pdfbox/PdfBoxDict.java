@@ -65,6 +65,7 @@ class PdfBoxDict implements PdfDict {
 				add(e.getKey(), new PdfBoxArray((ModelPdfArray) e.getValue()));
 			}else if (e.getValue() instanceof String) {
 				wrapped.setItem(e.getKey(), COSName.getPDFName((String) e.getValue()));
+                                wrapped.setNeedToBeUpdated(true);
 			} else {
 				throw new IllegalArgumentException(e.getValue().getClass().getName());
 			}

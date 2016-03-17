@@ -22,15 +22,21 @@ package eu.europa.esig.dss.pdf.pdfbox;
 
 import eu.europa.esig.dss.pdf.PdfArray;
 import eu.europa.esig.dss.pdf.PdfStreamArray;
-import org.apache.pdfbox.pdmodel.common.COSStreamArray;
-
+//import org.apache.pdfbox.pdmodel.common.COSStreamArray;
 
 class PdfBoxStreamArray implements PdfStreamArray {
 
+    /*
 	COSStreamArray wrapped;
 
 	public PdfBoxStreamArray(PdfArray array) {
 		this.wrapped = new COSStreamArray(((PdfBoxArray) array).wrapped);
 	}
+     */
 
+    public PdfBoxStreamArray(PdfArray array) {
+        
+        //TODO fix
+        throw new UnsupportedOperationException();
+    }
 }
