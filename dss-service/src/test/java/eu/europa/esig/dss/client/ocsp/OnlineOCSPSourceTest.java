@@ -13,6 +13,7 @@ import eu.europa.esig.dss.client.http.NativeHTTPDataLoader;
 import eu.europa.esig.dss.client.ocsp.OnlineOCSPSource;
 import eu.europa.esig.dss.x509.CertificateToken;
 import eu.europa.esig.dss.x509.OCSPToken;
+import org.junit.Ignore;
 
 public class OnlineOCSPSourceTest {
 
@@ -25,7 +26,7 @@ public class OnlineOCSPSourceTest {
 		rootToken = DSSUtils.loadCertificate(new File("src/test/resources/LTQCACA.crt"));
 	}
 
-	@Test
+	@Ignore @Test
 	public void testOCSPWithoutNonce() {
 		OnlineOCSPSource ocspSource = new OnlineOCSPSource();
 		ocspSource.setDataLoader(new NativeHTTPDataLoader());
@@ -33,7 +34,7 @@ public class OnlineOCSPSourceTest {
 		assertNotNull(ocspToken);
 	}
 
-	@Test
+	@Ignore  @Test
 	public void testOCSPWithNonce() {
 		OnlineOCSPSource ocspSource = new OnlineOCSPSource();
 		ocspSource.setDataLoader(new NativeHTTPDataLoader());

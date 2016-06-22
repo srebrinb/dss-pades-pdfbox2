@@ -26,7 +26,6 @@ import java.io.Serializable;
  * Parameters for a Signature creation/extension
  *
  */
-@SuppressWarnings("serial")
 public abstract class AbstractSerializableSignatureParameters implements Serializable {
 
 	/**
